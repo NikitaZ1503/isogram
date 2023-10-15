@@ -1,0 +1,5 @@
+C:/Users/nekit/source/repos/isogram1/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/nekit/source/repos/isogram1/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/nekit/source/repos/isogram1/out/build/x64-debug/isogram1/CMakeFiles/isogram1.dir
+C:/Users/nekit/source/repos/isogram1/out/build/x64-debug/isogram1/CMakeFiles/edit_cache.dir
+C:/Users/nekit/source/repos/isogram1/out/build/x64-debug/isogram1/CMakeFiles/rebuild_cache.dir
