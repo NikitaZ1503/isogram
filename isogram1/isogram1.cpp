@@ -1,49 +1,41 @@
-﻿#include <iostream>
+#include <iostream>
+#include <cstring>
 #include <string>
-#include <algorithm> 
-using std::cout;
-using std::cin;
-using std::endl;
+#include <cctype>
+#include <vector>
+#include <algorithm>
+
 using std::string;
+using std::cin;
+using std::cout;
+using std::vector;
+using std::tolower;
 
+string is_isogram(string test) {
 
-// If a given string is isogram or not
-string is_isogram(string str1)
-{
-    int len = str1.length();
+    sort(test.begin(), test.end());
 
-    // Convert the string in lower case letters
-    for (int i = 0; i < len; i++) {
-        str1[i] = tolower(str1[i]);
+    vector <char> symbols;
+    
+    for (int i = 0; i < test.size(); i++) {
+        int s = (int)(test[i]);
+        if (s >= 97 and s <= 122) {
+            symbols.push_back(test[i]);
+        }
+        
     }
+    for (int i = 0; i < symbols.size(); i++) {
 
-    sort(str1.begin(), str1.end());
-
-    for (int i = 0; i < len; i++) {
-        if (str1[i] == str1[i + 1])
-            return "False";
-    }
-    return "True";
+        if (tolower(symbols[i]) == tolower(symbols[i + 1])) { return "false"; break; }
+        else { return "true"; }
+            
+        }
 }
 
-// Output
-int main()
-{
-    bool flag = true;
-    while (flag != false) {
-        int input;
-        cout << "if you want to check whether a word is an isogram, enter 1 , otherwise 0" << endl;
-        cin >> input;
-        if (input == 1) {
-            string str1;
-            cin >> str1;
-
-            // Function call
-            cout << is_isogram(str1);
-            break;
-        }
-        else { flag = false; }
-    }
-
+int main() {
+    string test;
+    cin >> test;
+    cout << is_isogram(test);
+        
     return 0;
 }
